@@ -1,0 +1,21 @@
+<form method="post" novalidate>
+  {% csrf_token %}
+    <table border = 10 cellpadding="10dp">
+        <div>
+            <input type="text" class=" form-control" name="heading" value=""></div><div>
+        <textarea class="form-control" name = "question" value = ""></textarea></div>
+
+    </div>
+
+
+        {% for i in "XXXX" %}
+    <div data-toggle="buttons" class="btn-group btn-group-justified fancy-radio-group">
+        <tr><label class="btn btn-fancy-radio text-xs text-no-transform clearfix">
+         <td>   <input type="radio" class="hidden" name="options">
+         </td><td>  <input type="text" class=" form-control" name="option{{forloop.counter0}}" value="">
+        </td></label></tr>
+    </div>
+        {% endfor %}
+    </table>
+  <button type="submit">Submit</button>
+</form>

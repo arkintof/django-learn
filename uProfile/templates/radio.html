@@ -1,0 +1,45 @@
+<form method="post" action="">
+    {% csrf_token %}
+    <div>
+        <input type="text" class=" form-control" name="query" value="">
+    </div>
+    <div data-toggle="buttons" class="btn-group btn-group-justified fancy-radio-group">
+        <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img
+                src="data:image/gif;base64,R0lGODlhEgASAMQAAAAAAP////v7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAACH5BAEAABwALAAAAAASABIAAAV9ICeKymNtm/UoY8shEeUgBIE4VIS4ycUMgqBw0MAkRoiLQsgULi47jqTRrAoaEo6CArQyB5SSw1t1mBDkJuJESDMJm0zbHTRsKmi6YA0Z6x0QCxNdaQMTCwJTdAxZL0ppT1EcPT9VREYuCBIyBwQFNxQSki4LJhsaFA8LLiEAOw=="
+                class="normal"/> <img
+                src="data:image/gif;base64,R0lGODlhEgASANUAAAAAAP///xd/10yp+KLV/9ru/vv7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACAALAAAAAASABIAAAaoQJBQ6JhoPh/NxDFsghgVjISBQDAkmArD2dhADoaw+BDhNIaMjUPMFj82W5AlIi4MBIJBQRyxgBwYYAYEeIUCBGEHGEUSYQWGhnsGEkYMYXeQeANhDEcIYZmGYQgfHZ8GoYVhCh8ZlgaYmZsGnRSNBo+hkhIUDxeChJCIBgcXD3J0jph6YhB+T2ptbW9xIF1f0mRmTgwWUgsICVcYFtVOD0YfHhgTx01BADs="
+                class="checked"/>
+            <input type="radio" class="hidden" name="options">
+        </label>
+        <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img
+                src="data:image/gif;base64,R0lGODlhEgASAMQAAAAAAP////v7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAACH5BAEAABwALAAAAAASABIAAAV9ICeKymNtm/UoY8shEeUgBIE4VIS4ycUMgqBw0MAkRoiLQsgULi47jqTRrAoaEo6CArQyB5SSw1t1mBDkJuJESDMJm0zbHTRsKmi6YA0Z6x0QCxNdaQMTCwJTdAxZL0ppT1EcPT9VREYuCBIyBwQFNxQSki4LJhsaFA8LLiEAOw=="
+                class="normal"/> <img
+                src="data:image/gif;base64,R0lGODlhEgASANUAAAAAAP///xd/10yp+KLV/9ru/vv7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACAALAAAAAASABIAAAaoQJBQ6JhoPh/NxDFsghgVjISBQDAkmArD2dhADoaw+BDhNIaMjUPMFj82W5AlIi4MBIJBQRyxgBwYYAYEeIUCBGEHGEUSYQWGhnsGEkYMYXeQeANhDEcIYZmGYQgfHZ8GoYVhCh8ZlgaYmZsGnRSNBo+hkhIUDxeChJCIBgcXD3J0jph6YhB+T2ptbW9xIF1f0mRmTgwWUgsICVcYFtVOD0YfHhgTx01BADs="
+                class="checked"/>
+            <input type="radio" class="hidden" name="options">
+        </label>
+        <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img
+                src="data:image/gif;base64,R0lGODlhEgASAMQAAAAAAP////v7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAACH5BAEAABwALAAAAAASABIAAAV9ICeKymNtm/UoY8shEeUgBIE4VIS4ycUMgqBw0MAkRoiLQsgULi47jqTRrAoaEo6CArQyB5SSw1t1mBDkJuJESDMJm0zbHTRsKmi6YA0Z6x0QCxNdaQMTCwJTdAxZL0ppT1EcPT9VREYuCBIyBwQFNxQSki4LJhsaFA8LLiEAOw=="
+                class="normal"/> <img
+                src="data:image/gif;base64,R0lGODlhEgASANUAAAAAAP///xd/10yp+KLV/9ru/vv7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACAALAAAAAASABIAAAaoQJBQ6JhoPh/NxDFsghgVjISBQDAkmArD2dhADoaw+BDhNIaMjUPMFj82W5AlIi4MBIJBQRyxgBwYYAYEeIUCBGEHGEUSYQWGhnsGEkYMYXeQeANhDEcIYZmGYQgfHZ8GoYVhCh8ZlgaYmZsGnRSNBo+hkhIUDxeChJCIBgcXD3J0jph6YhB+T2ptbW9xIF1f0mRmTgwWUgsICVcYFtVOD0YfHhgTx01BADs="
+                class="checked"/>
+            <input type="radio" class="hidden" name="options">
+        </label>
+        <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img
+                src="data:image/gif;base64,R0lGODlhEgASAMQAAAAAAP////v7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAACH5BAEAABwALAAAAAASABIAAAV9ICeKymNtm/UoY8shEeUgBIE4VIS4ycUMgqBw0MAkRoiLQsgULi47jqTRrAoaEo6CArQyB5SSw1t1mBDkJuJESDMJm0zbHTRsKmi6YA0Z6x0QCxNdaQMTCwJTdAxZL0ppT1EcPT9VREYuCBIyBwQFNxQSki4LJhsaFA8LLiEAOw=="
+                class="normal"/> <img
+                src="data:image/gif;base64,R0lGODlhEgASANUAAAAAAP///xd/10yp+KLV/9ru/vv7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACAALAAAAAASABIAAAaoQJBQ6JhoPh/NxDFsghgVjISBQDAkmArD2dhADoaw+BDhNIaMjUPMFj82W5AlIi4MBIJBQRyxgBwYYAYEeIUCBGEHGEUSYQWGhnsGEkYMYXeQeANhDEcIYZmGYQgfHZ8GoYVhCh8ZlgaYmZsGnRSNBo+hkhIUDxeChJCIBgcXD3J0jph6YhB+T2ptbW9xIF1f0mRmTgwWUgsICVcYFtVOD0YfHhgTx01BADs="
+                class="checked"/>
+            <input type="radio" class="hidden" name="options">
+        </label>
+        <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img
+                src="data:image/gif;base64,R0lGODlhEgASAMQAAAAAAP////v7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAACH5BAEAABwALAAAAAASABIAAAV9ICeKymNtm/UoY8shEeUgBIE4VIS4ycUMgqBw0MAkRoiLQsgULi47jqTRrAoaEo6CArQyB5SSw1t1mBDkJuJESDMJm0zbHTRsKmi6YA0Z6x0QCxNdaQMTCwJTdAxZL0ppT1EcPT9VREYuCBIyBwQFNxQSki4LJhsaFA8LLiEAOw=="
+                class="normal"/> <img
+                src="data:image/gif;base64,R0lGODlhEgASANUAAAAAAP///xd/10yp+KLV/9ru/vv7+/r6+vn5+fj4+Pf39+/v7+7u7ufn5+bm5uXl5dra2tnZ2djY2MvLy8jIyL+/v729vbm5ubi4uLe3t7a2trKysrGxsa+vr66urq2trf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACAALAAAAAASABIAAAaoQJBQ6JhoPh/NxDFsghgVjISBQDAkmArD2dhADoaw+BDhNIaMjUPMFj82W5AlIi4MBIJBQRyxgBwYYAYEeIUCBGEHGEUSYQWGhnsGEkYMYXeQeANhDEcIYZmGYQgfHZ8GoYVhCh8ZlgaYmZsGnRSNBo+hkhIUDxeChJCIBgcXD3J0jph6YhB+T2ptbW9xIF1f0mRmTgwWUgsICVcYFtVOD0YfHhgTx01BADs="
+                class="checked"/>
+            <input type="radio" class="hidden" name="options">
+        </label>
+    </div>
+    <button type="submit" class="btn btn-default" name="search">Search</button>
+
+</form>

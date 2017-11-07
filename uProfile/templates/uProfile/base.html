@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles%}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'discussion/style.css' %}"/>
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body style = "padding:70px">
+<nav class="navbar navbar-inverse navbar-fixed-top" role = "navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'uProfile:index'%}">MY WEBSITE</a>
+        </div>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Q&A
+                    </a>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'uProfile:help' %}" >
+                <div class="form-group">
+                    <input type="text" class=" form-control" name="query" value="">
+                </div>
+                <button type="submit" class="btn btn-default" name="search">Search</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'uProfile:QandA_add' %}">
+                        {% else %}
+                        <a href = "{% url 'uProfile:login' %}">
+                        {% endif %}
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add Question
+                    </a>
+                </li>
+                {% if not user.is_authenticated %}
+                <li class="">
+                    <a href="{% url 'uProfile:register' %}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Register
+                    </a>
+                </li>
+                {% endif %}
+                <li class="">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Profile
+                    </a>
+                </li>
+                <li class="">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'uProfile:logout' %}">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;{{ user.get_username }}
+                    </a>
+                    {% else %}
+                    <a href="{% url 'uProfile:login' %}">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Sign in
+                    </a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container">
+{% block body %}
+{% endblock %}
+</div>
+
+ <script src="{% static 'discussion/sketch.js' %}"></script>
+        <script>
+
+        var COLOURS = [ '#E3EB64', '#A7EBCA', '#FFFFFF', '#D8EBA7', '#868E80' ];
+        var radius = 0;
+
+        Sketch.create({
+
+            container: document.getElementById( 'container' ),
+            autoclear: false,
+            retina: 'auto',
+
+            setup: function() {
+                console.log( 'setup' );
+            },
+
+            update: function() {
+                radius = 2 + abs( sin( this.millis * 0.003 ) * 50 );
+            },
+
+            // Event handlers
+
+            keydown: function() {
+                if ( this.keys.C ) this.clear();
+            },
+
+            // Mouse & touch events are merged, so handling touch events by default
+            // and powering sketches using the touches array is recommended for easy
+            // scalability. If you only need to handle the mouse / desktop browsers,
+            // use the 0th touch element and you get wider device support for free.
+            touchmove: function() {
+
+                for ( var i = this.touches.length - 1, touch; i >= 0; i-- ) {
+
+                    touch = this.touches[i];
+
+                    this.lineCap = 'round';
+                    this.lineJoin = 'round';
+                    this.fillStyle = this.strokeStyle = COLOURS[ i % COLOURS.length ];
+                    this.lineWidth = radius;
+
+                    this.beginPath();
+                    this.moveTo( touch.ox, touch.oy );
+                    this.lineTo( touch.x, touch.y );
+                    this.stroke();
+                }
+            }
+        });
+
+ </script>
+
+</body>
+</html>

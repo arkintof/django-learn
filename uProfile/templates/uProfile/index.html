@@ -1,0 +1,12 @@
+{% extends 'uProfile/base.html' %}
+{%  block  body %}
+<ul>
+{% for detail in userdetail %}
+
+<li><a href="{% url 'uProfile:details' detail.id%}">{{detail.heading}}</a></li>
+{% endfor %}
+</ul>
+z
+{% endblock %}
+
+

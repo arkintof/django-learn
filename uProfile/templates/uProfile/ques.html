@@ -1,0 +1,91 @@
+{% extends 'uProfile/base.html' %}
+{%  block  body %}
+{% load mathfilters %}
+
+<div class="container">
+    <div class="row">
+        <h2>
+            Question Box</h2>
+        <div class="col-md-6">
+            <!--<div class="blockquote-box clearfix">-->
+                <!--<div class="square pull-left">-->
+                    <!--<img src="http://placehold.it/60/8e44ad/FFF&text=B" alt="" class="" />-->
+                <!--</div>-->
+                <!--<h4>-->
+                    <!--Bootsnipp</h4>-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+                    <!--ante.-->
+                <!--</p>-->
+            <!--</div>-->
+            {% for detail in QandA_list %}
+            {% load mod %}
+            <a style="display:block" href="{% url 'uProfile:Qtn' detail.id %}" class="fill-div">
+            <div class="blockquote-box blockquote-{{detail.id|mod:"6"}} clearfix">
+                <div class="square pull-left" >
+                    <span class="glyphicon glyphicon-music glyphicon-lg"></span>
+                </div>
+                <div class = "col-md-8" id = "heading">
+                <h4>
+                    {{detail.heading}}</h4>
+                <div class="row" id = "data">
+                <p>
+                    {{detail.question}}
+                </p>
+                </div>
+                    </div>
+            </div>
+            </a>
+            {% endfor %}
+
+            <!--<div class="blockquote-box blockquote-success clearfix">-->
+                <!--<div class="square pull-left">-->
+                    <!--<span class="glyphicon glyphicon-tree-conifer glyphicon-lg"></span>-->
+                <!--</div>-->
+                <!--<h4>-->
+                    <!--Tree conifer</h4>-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+                    <!--ante.-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+            <!--<div class="blockquote-box blockquote-info clearfix">-->
+                <!--<div class="square pull-left">-->
+                    <!--<span class="glyphicon glyphicon-info-sign glyphicon-lg"></span>-->
+                <!--</div>-->
+                <!--<h4>-->
+                    <!--Information</h4>-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+                    <!--ante.-->
+                <!--</p>-->
+            <!--</div>-->
+            <!--<div class="blockquote-box blockquote-warning clearfix">-->
+                <!--<div class="square pull-left">-->
+                    <!--<span class="glyphicon glyphicon-warning-sign glyphicon-lg"></span>-->
+                <!--</div>-->
+                <!--<h4>-->
+                    <!--Warning</h4>-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+                    <!--ante.-->
+                <!--</p>-->
+            <!--</div>-->
+            <!--<div class="blockquote-box blockquote-danger clearfix">-->
+                <!--<div class="square pull-left">-->
+                    <!--<span class="glyphicon glyphicon-record glyphicon-lg"></span>-->
+                <!--</div>-->
+                <!--<h4>-->
+                    <!--Danger</h4>-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+                    <!--ante.-->
+                <!--</p>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+{% endblock %}
